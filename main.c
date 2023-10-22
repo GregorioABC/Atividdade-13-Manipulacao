@@ -335,7 +335,135 @@
 //     return 0;
 // }
 //18
-
-
-
+// #include<stdio.h>
+// #include<stdlib.h>
+// #include<string.h>
+// void substituirLetra(char string[], char l1, char l2) {
+//     for (int i = 0; i < strlen(string); i++) {
+//         if (string[i] == l1) {
+//             string[i] = l2;
+//         }
+//     }
+// }
+// int main() {
+//     char string[100];
+//     char l1, l2;
+//     printf("Digite uma string: ");
+//     fgets(string, sizeof(string), stdin);
+//     printf("Digite a letra a ser substituída: ");
+//     scanf(" %c", &l1);
+//     printf("Digite a letra de substituição: ");
+//     scanf(" %c", &l2);
+//     substituirLetra(string, l1, l2);
+//     printf("String resultante: %s\n", string);
+//     return 0;
+// }
+//19
+// #include<stdio.h>
+// #include<stdlib.h>
+// #include<string.h>
+// int main() {
+//     char nomeMaisJovem[50];
+//     char nomeMaisVelho[50];
+//     int idadeMaisJovem = 1000;
+//     int idadeMaisVelho = -1; 
+//     while (1) {
+//         char nome[50];
+//         int idade;
+//         printf("Digite o nome: ");
+//         scanf("%s", nome);
+//         printf("Digite a idade: ");
+//         scanf("%d", &idade);
+//         if (idade < 0) {
+//             break;
+//         }
+//         if (idade < idadeMaisJovem) {
+//             idadeMaisJovem = idade;
+//             strcpy(nomeMaisJovem, nome);
+//         }
+//         if (idade > idadeMaisVelho) {
+//             idadeMaisVelho = idade;
+//             strcpy(nomeMaisVelho, nome);
+//         }
+//     }
+//     if (idadeMaisVelho != -1) {
+//         printf("Pessoa mais velha: %s, %d anos\n", nomeMaisVelho, idadeMaisVelho);
+//     }
+//     if (idadeMaisJovem != 1000) {
+//         printf("Pessoa mais jovem: %s, %d anos\n", nomeMaisJovem, idadeMaisJovem);
+//     }
+//     return 0;
+// }
+//20
+//21
+// #include<stdio.h>
+// #include<stdlib.h>
+// #include<string.h>
+// void imprimirInvertidoSubstituindoA(char frase[]) {
+//     for (int i = strlen(frase) - 1; i >= 0; i--) {
+//       if (frase[i] == 'A' || frase[i] == 'a') {
+//         printf("*");
+//       } else {
+//         printf("%c", frase[i]);
+//         }
+//     }
+//     printf("\n");
+// }
+// int main() {
+//     char frase1[100];
+//     char frase2[100];
+//     printf("Digite a primeira frase: ");
+//     fgets(frase1, sizeof(frase1), stdin);
+//     printf("Digite a segunda frase: ");
+//     fgets(frase2, sizeof(frase2), stdin);
+//     printf("A primeira frase invertida com A substituído por *: ");
+//     imprimirInvertidoSubstituindoA(frase1);
+//     printf("A segunda frase invertida com A substituído por *: ");
+//     imprimirInvertidoSubstituindoA(frase2);
+//     return 0;
+// }
+//22
+// #include<stdio.h>
+// #include<stdlib.h>
+// #include<string.h>
+// int main() {
+//     char nomeMercadoria[50];
+//     float valorTotal, valorDesconto, valorAVista;
+//     printf("Digite o nome da mercadoria: ");
+//     scanf("%s", nomeMercadoria);
+//     printf("Digite o valor total da mercadoria: ");
+//     scanf("%f", &valorTotal);
+//     valorDesconto = valorTotal * 0.1;
+//     valorAVista = valorTotal - valorDesconto;
+//     printf("Nome da mercadoria: %s\n", nomeMercadoria);
+//     printf("Valor total: R$ %.2f\n", valorTotal);
+//     printf("Valor do desconto: R$ %.2f\n", valorDesconto);
+//     printf("Valor a ser pago à vista: R$ %.2f\n", valorAVista);
+//     return 0;
+// }
+//23
+// #include<stdio.h>
+// #include<stdlib.h>
+// #include<string.h>
+// void imprimirSegmento(char string[], int i, int j) {
+//     if (i < 0 || j >= strlen(string)) {
+//         printf("Indices fornecidos estão fora dos limites da string.\n");
+//         return;
+//     }
+//     printf("Segmento S[%d..%d]: ", i, j);
+//     for (int k = i; k <= j; k++) {
+//         printf("%c", string[k]);
+//     }
+//     printf("\n");
+// }
+// int main() {
+//     char string[100];
+//     int i, j;
+//     printf("Digite uma string de inteiros não negativos: ");
+//     fgets(string, sizeof(string), stdin);
+//     printf("Digite os valores de i e j para segmentação (separados por espaço): ");
+//     scanf("%d %d", &i, &j);
+//     imprimirSegmento(string, i, j);
+//     return 0;
+// }
 
